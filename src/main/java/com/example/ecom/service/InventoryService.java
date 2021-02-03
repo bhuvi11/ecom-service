@@ -16,7 +16,7 @@ import java.util.Optional;
 @Service
 @SuppressWarnings("Duplicates")
 public class InventoryService {
-
+//Test
     private final InventoryRepository inventoryRepository;
     private final ProductRepository productRepository;
 
