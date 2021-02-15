@@ -9,12 +9,12 @@ name: Snyk Dev Scan
 
 on:
   push:
-    branches: [ master ]
+    branches: [ Dev ]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ master ]
+    branches: [ Dev ]
   workflow_dispatch:
-    branches: [ master ]
+    branches: [ Dev ]
   #schedule:
    # - cron: '27 12 * * 4'
 
