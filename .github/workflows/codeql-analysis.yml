@@ -12,13 +12,15 @@
 name: "CodeQL"
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
+  #push:
+   # branches: [ main ]
+  #pull_request:
     # The branches below must be a subset of the branches above
+   # branches: [ main ]
+  workflow_dispatch:
     branches: [ main ]
-  schedule:
-    - cron: '17 20 * * 6'
+  #schedule:
+   # - cron: '17 20 * * 6'
 
 jobs:
   analyze:
@@ -65,3 +67,10 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
+      with: 
+        output: reports 
+    - name: artifacts upload
+      uses: actions/upload-artifact@v1.0.0
+      with: 
+       name: shiftleft-scan-reports
+       path: reports
